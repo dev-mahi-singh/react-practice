@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Top = () => {
+const Top = (props) => {
   return (
       <div className="top">
           <button>available</button>
-          <h1>$55/hr</h1>
+          <h1>{props.pay}</h1>
         </div>
   )
 }
