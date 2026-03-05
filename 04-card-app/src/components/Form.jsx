@@ -1,26 +1,51 @@
-import React from 'react'
+import { useState } from 'react'
 import ImageURl from './ImageURl'
 import UserNameInput from './UserNameInput'
 import RoleInput from './RoleInput'
 import AboutField from './AboutField'
 import SubmitBtn from './SubmitBtn'
 
-const Form = () => {
+const Form = ({onAddCard}) => {
+
+    const [image, setImage] = useState('');
+    const [name, setName] = useState('');
+    const [role, setRole] = useState('');
+    const [about, setAbout] = useState('');
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+
+        const newCard = {
+            image,
+            name,
+            role,
+            about
+        };
+
+        onAddCard(newCard);
+
+        setImage('');
+        setName('');
+        setRole('');
+        setAbout('');
+    }
+
     return (
 
-        <form className="space-y-5">
+        <form onSubmit={(e) => submitHandler(e)}
+            className="space-y-5">
 
             {/* Image URL */}
-            <ImageURl />
+            <ImageURl image={image} setImage={setImage} />
 
             {/*  Username */}
-            <UserNameInput />
+            <UserNameInput name={name} setName={setName} />
 
             {/*  Role */}
-            <RoleInput />
+            <RoleInput role={role} setRole={setRole} />
 
             {/* About User */}
-            <AboutField />
+            <AboutField about={about} setAbout={setAbout} />
 
             {/* Button */}
             <SubmitBtn />
