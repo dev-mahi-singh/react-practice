@@ -3,7 +3,7 @@ const RefreshBtn = ({ onClick }) => {
     <button
       onClick={onClick}
       id="refreshBtn"
-      className="absolute top-[66%] left-1/2 -translate-x-1/2 flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-pink-500 text-white rounded-md shadow-md font-semibold cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl"
+      className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-amber-500 to-pink-500 text-white rounded-md shadow-md font-semibold cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-xl"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

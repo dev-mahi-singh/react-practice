@@ -16,8 +16,8 @@ const App = () => {
   }, []);
 
   return (
-    <div className='min-h-screen w-full bg-gradient-to-r from-teal-400 to-yellow-200 flex items-center justify-center gap-7'>
-      <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-6">
+    <div className='min-h-screen w-full bg-gradient-to-r from-teal-400 to-yellow-200 flex flex-col items-center justify-center gap-7'>
+      <div className="flex flex-wrap justify-center lg:flex-nowrap lg:justify-center gap-6">
       {data.map(function (elem, idx) {
         return <Card key={idx} first={elem.name.first} last={elem.name.last} email={elem.email} pic={elem.picture.large} />
       })}
