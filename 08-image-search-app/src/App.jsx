@@ -1,19 +1,14 @@
 import React from 'react'
-import Base from './components/Base'
 import SearchBar from './components/SearchBar'
 import Header from './components/Header'
+import ImageGrid from './components/ImageGrid'
 
 const App = () => {
   return (
-    <div className='min-h-screen w-full bg-white overflow-x-hidden'>
+    <div className='min-h-screen w-full bg-gradient-to-r from-violet-200 to-pink-200 overflow-x-hidden'>
       <Header />
       <SearchBar />
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 auto-rows-[10px] my-8 mx-2 md:mx-8">
-        <Base />
-        <Base />
-        <Base />
-        <Base />
-      </div>
+      <ImageGrid />
     </div>
   )
 }
