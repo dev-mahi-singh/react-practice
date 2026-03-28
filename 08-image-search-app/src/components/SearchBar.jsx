@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SearchBar = () => {
+const SearchBar = ({ query, setQuery, handleSearch, loading }) => {
   return (
     <div className="md:h-20 h-8 w-full flex items-center justify-center mx-2 md:mx-8">
       <div className="relative md:w-1/2 w-[90%]">
@@ -16,11 +16,15 @@ const SearchBar = () => {
 
         <input
           type="text"
+          value={query} onChange={(e) => setQuery(e.target.value)}
           placeholder="Search photos and illustrations"
           className="w-full md:pl-10 md:pr-4 md:py-4 pl-8 pr-3 py-2 outline-none bg-gray-100 shadow-md rounded-full"
         />
 
-        <button className="absolute right-1 top-1 bottom-1 px-4 md:px-6 bg-violet-500 hover:bg-violet-600 text-white rounded-full text-sm md:text-base transition">
+        <button
+          onClick={handleSearch}
+          disabled={loading}
+          className="absolute right-1 top-1 bottom-1 px-4 md:px-6 bg-violet-500 hover:bg-violet-600 text-white rounded-full text-sm md:text-base transition cursor-pointer active:scale-95">
           Search
         </button>
 
