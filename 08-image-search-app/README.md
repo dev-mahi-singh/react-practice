@@ -45,6 +45,12 @@ This project uses the **Unsplash API** to fetch images.
 
 ---
 
+## 🔐 Environment Variables
+
+Create a `.env` file in the root directory and add:
+
+VITE_UNSPLASH_API_KEY=your_api_key_here
+
 ## 📦 Installation
 
 1. Clone the repository:
@@ -74,9 +80,10 @@ npm install axios
 5. Add your API key:
 
 Replace in your code:
+Add your API key in `.env` file:
 
-```js
-const apiKey = "YOUR_API_KEY";
+```
+VITE_UNSPLASH_API_KEY=your_api_key_here
 ```
 
 6. Start the development server:
